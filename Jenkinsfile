@@ -70,6 +70,7 @@ try {
         ]]) {
           ansiColor('xterm') {
             sh 'terraform show'
+            echo "done"
           }
         }
       }
