@@ -5,7 +5,7 @@ try {
   stage('checkout') {
     node {
       cleanWs()
-      checkout scm
+     // checkout scm
     }
   }
 
@@ -18,7 +18,7 @@ try {
         accessKeyVariable: 'AWS_ACCESS_KEY_ID',
         secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
       ]]) {
-        ansiColor('xterm') {
+       // ansiColor('xterm') {
           sh 'terraform init'
         }
       }
@@ -34,7 +34,7 @@ try {
         accessKeyVariable: 'AWS_ACCESS_KEY_ID',
         secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
       ]]) {
-        ansiColor('xterm') {
+       // ansiColor('xterm') {
           sh 'terraform plan'
         }
       }
@@ -52,7 +52,7 @@ try {
           accessKeyVariable: 'AWS_ACCESS_KEY_ID',
           secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
         ]]) {
-          ansiColor('xterm') {
+         // ansiColor('xterm') {
             sh 'terraform apply -auto-approve'
           }
         }
