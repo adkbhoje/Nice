@@ -75,4 +75,6 @@ try {
       }
     }
   }
+  currentBuild.result = 'SUCCESS'
+} 
   
