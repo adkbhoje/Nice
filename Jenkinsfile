@@ -9,8 +9,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'java -version'
-                sh "hello from the other side"
+                //sh 'java -version'
+                echo "hello from the other side"
             }
         }
     }
