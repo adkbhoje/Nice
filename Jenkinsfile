@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'java --version'
+                sh 'java -version'
                 sh "hello from the other side"
             }
         }
