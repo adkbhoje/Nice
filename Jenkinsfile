@@ -1,3 +1,11 @@
+pipeline {
+  agent {
+    Dockerfile {
+      filename 'Dockerfile'
+      reuseNode false
+    }  
+  }
+
 // Jenkinsfile
 String credentialsId = 'awsCredentials'
 
