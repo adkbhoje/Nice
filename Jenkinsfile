@@ -15,6 +15,7 @@ pipeline {
         }
     }
 }
+
 // Jenkinsfile
 String credentialsId = 'awsCredentials'
 
@@ -56,6 +57,7 @@ try {
         }
       }
     }
+  }
 
   if (env.BRANCH_NAME == 'master') {
 
@@ -90,7 +92,8 @@ try {
         }
       }
     }
-currentBuild.result = 'SUCCESS' {
+  }
+  currentBuild.result = 'SUCCESS'
 }
 catch (org.jenkinsci.plugins.workflow.steps.FlowInterruptedException flowError) {
   currentBuild.result = 'ABORTED'
@@ -103,5 +106,4 @@ finally {
   if (currentBuild.result == 'SUCCESS') {
     currentBuild.result = 'SUCCESS'
   }
-}
 }
