@@ -1,6 +1,6 @@
 pipeline {
-    agent { Dockerfile true }
-     args '--entrypoint=\'\''
+    //agent { Dockerfile true }
+     //args '--entrypoint=\'\''
     agent {
         dockerfile {
             args '--entrypoint=\'\''
@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'java -version'
+                //sh 'java -version'
                 echo "hello from the other side"
             }
         }
