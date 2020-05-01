@@ -1,6 +1,6 @@
 pipeline {
     agent { Dockerfile true }
-     //args '--entrypoint=\'\''
+     args '--entrypoint=\'\''
     agent {
         dockerfile {
             args '--entrypoint=\'\''
